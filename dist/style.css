@@ -1,0 +1,17 @@
+main {
+    margin: 30px 30px 30px 30px;
+    padding: 50px;
+}
+
+.card {
+    width: 18rem;
+}
+
+.card-header {
+    background-color: rgb(96, 163, 240);
+}
+
+.employee-name {
+    color: snow;
+    font-weight: bold;
+}
