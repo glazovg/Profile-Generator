@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
-const { generateHtml } = require('./src/generateHtml')
+const { generateHtml } = require('./src/generateHtml');
+const { createManagerCard, createTeamCards } = require('./src/createCards');
 inquirer.registerPrompt("loop", require("inquirer-loop")(inquirer));
 
 async function main() {
@@ -33,7 +34,7 @@ async function main() {
             type: 'input',
             message: 'What is the manager\'s email address?',
             validate: (email) => {
-                // Regex mail check (return true if valid mail)
+                // Regex mail check
                 if (!/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(email)) {
                     return 'Please insert a valid email.'
                 } else {
@@ -86,7 +87,7 @@ async function main() {
                     type: 'input',
                     message: 'What is his/her email address?',
                     validate: (email) => {
-                        // Regex mail check (return true if valid mail)
+                        // Regex mail check
                         if (!/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(email)) {
                             return 'Please insert a valid email.'
                         } else {
@@ -131,8 +132,8 @@ async function main() {
     }
 
     const managerCard = createManagerCard(manager);
-    const engineerCards = createEngineerCards(engineers);
-    const internCards = createInternCards(interns);
+    const engineerCards = createTeamCards(engineers);
+    const internCards = createTeamCards(interns);
 
     generateHtml(managerCard, engineerCards, internCards);
 }
