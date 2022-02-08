@@ -23,6 +23,7 @@
   "homepage": "https://github.com/glazovg/team-profile-generator-hw#readme",
   "dependencies": {
     "inquirer": "^8.2.0",
+    "inquirer-loop": "^0.3.0",
     "jest": "^27.4.7"
   }
 }
