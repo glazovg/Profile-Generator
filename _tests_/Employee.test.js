@@ -21,7 +21,7 @@ describe('Employee class', () => {
 
     describe('getEmail()', () => {
         it('Returns email', () => {
-            expect(employee.getName()).toBe(employee.email);
+            expect(employee.getEmail()).toBe(employee.email);
         });
     });
 
