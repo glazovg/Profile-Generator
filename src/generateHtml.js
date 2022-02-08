@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const generateHtml = function (managerCard, engineerCards, internCards) {
     const fileName = `./dist/index.html`;
 

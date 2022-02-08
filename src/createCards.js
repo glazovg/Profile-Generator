@@ -1,3 +1,6 @@
+const Engineer = require('../lib/Engineer');
+const Intern = require('../lib/Intern');
+
 const createManagerCard = function (member) {
     const managerCard = `
             <div class="col">
@@ -36,9 +39,9 @@ const createTeamCards = function (members) {
     members.forEach(member => {
         let specialTd;
 
-        if (member.type === 'Engineer') {
+        if (member instanceof Engineer) {
             specialTd = `<td>GitHub: <a class="employee-github" href="https://github.com/${member.github}" target="_blank">https://github.com/${member.github}/</a></td>`;
-        } else if (member.type === 'Intern') {
+        } else if (member instanceof Intern) {
             specialTd = `<td>School: <span class="employee-school">${member.school}</span></td>`;
         }
 
