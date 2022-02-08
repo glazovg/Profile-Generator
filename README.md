@@ -30,7 +30,7 @@ To start the application type in terminal:
 
 To create a new one just repeat the previous instructions again.
 
-[Walkthrough video]()
+[Walkthrough video](https://watch.screencastify.com/v/nA7eYohrvlfTkAsh1gce)
 
 NOTE: Every time the command is executed a new HTML file is created overwriting the last one.
     
