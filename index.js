@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const { generateHtml } = require('./src/generateHtml');
-const { createManagerCard, createTeamCards } = require('./src/createCard');
+const { createManagerCard, createTeamCards } = require('./src/createCards');
 inquirer.registerPrompt("loop", require("inquirer-loop")(inquirer));
 
 async function main() {

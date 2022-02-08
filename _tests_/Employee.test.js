@@ -1,7 +1,7 @@
 const Employee = require('../lib/Employee');
 
 describe('Employee class', () => {
-    const employee = new Employee('Emmet','001','traveltime@btf.com');
+    const employee = new Employee('Emmet Brown', '001','traveltime@btf.com');
 
     it('Creates a new Employee', () => {
         expect(employee).toBeInstanceOf(Employee);
